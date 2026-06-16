@@ -206,54 +206,69 @@ Ver Pacotes
 
 <section id="comprar" class="order-section">
 
-<h2>Solicitar Pacote</h2>
+    <h2>Solicitar Pacote</h2>
 
-<form id="pedidoForm">
+    <p class="form-info">
+        Preencha os dados abaixo e envie o pedido pelo WhatsApp.
+    </p>
 
-<input
-type="text"
-id="nome"
-placeholder="Seu nome"
-required>
+    <form id="pedidoForm">
 
-<input type="tel" id="numero" required>
-<select id="pacote">
+        <input
+            type="text"
+            id="nome"
+            placeholder="Digite o seu nome completo"
+            required>
 
-<option>1GB - 25MT</option>
-<option>2GB - 50MT</option>
-<option>3GB - 75MT</option>
-<option>4GB - 100MT</option>
-<option>5GB - 125MT</option>
+        <input
+            type="tel"
+            id="numero"
+            placeholder="Número Vodacom que receberá os Megas (84/85)"
+            required>
 
-<option>4.36GB - 149MT</option>
-<option>6.5GB - 199MT</option>
+        <select id="pacote" required>
 
-<option>5GB - 180MT</option>
-<option>10GB - 320MT</option>
-<option>20GB - 580MT</option>
-<option>50GB - 1360MT</option>
+            <option value="">Selecione um pacote</option>
 
-<option>11GB + Chamadas - 450MT</option>
-<option>15GB + Chamadas - 570MT</option>
-<option>21GB + Chamadas - 770MT</option>
-<option>39GB + Chamadas - 1350MT</option>
+            <option>1GB - 25MT</option>
+            <option>2GB - 50MT</option>
+            <option>3GB - 75MT</option>
+            <option>4GB - 100MT</option>
+            <option>5GB - 125MT</option>
 
-</select>
+            <option>4.36GB - 149MT</option>
+            <option>6.5GB - 199MT</option>
 
-<select id="pagamento">
-<option>M-Pesa</option>
-<option>e-Mola</option>
-<option>BCI</option>
-</select>
+            <option>5GB - 180MT</option>
+            <option>10GB - 320MT</option>
+            <option>20GB - 580MT</option>
+            <option>50GB - 1360MT</option>
 
-<button type="submit">
-Solicitar Agora
-</button>
+            <option>11GB + Chamadas - 450MT</option>
+            <option>15GB + Chamadas - 570MT</option>
+            <option>21GB + Chamadas - 770MT</option>
+            <option>39GB + Chamadas - 1350MT</option>
 
-</form>
+        </select>
+
+        <select id="pagamento" required>
+
+            <option value="">Método de Pagamento</option>
+
+            <option>M-Pesa</option>
+            <option>e-Mola</option>
+            <option>BCI</option>
+
+        </select>
+
+        <button type="submit">
+            <i class="fa-brands fa-whatsapp"></i>
+            Solicitar Agora
+        </button>
+
+    </form>
 
 </section>
-
 <section id="sobre" class="sobre">
 
 <h2>Sobre a TXAzi Byte</h2>
