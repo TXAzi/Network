@@ -1,6 +1,6 @@
 /* ==========================================
    TXAZI BYTE PREMIUM 2026
-   SCRIPT.JS COMPLETO
+   SCRIPT.JS OFICIAL
 ========================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -47,8 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const icon = menuBtn.querySelector("i");
 
                 if (icon) {
+
                     icon.classList.remove("fa-xmark");
                     icon.classList.add("fa-bars");
+
                 }
 
             });
@@ -70,20 +72,20 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
 
             const nome =
-                document.getElementById("nome")?.value.trim() || "";
+                document.getElementById("nome")?.value.trim();
 
             const numero =
-                document.getElementById("numero")?.value.trim() || "";
+                document.getElementById("numero")?.value.trim();
 
             const pacote =
-                document.getElementById("pacote")?.value || "";
+                document.getElementById("pacote")?.value;
 
             const pagamento =
-                document.getElementById("pagamento")?.value || "";
+                document.getElementById("pagamento")?.value;
 
             if (!nome || !numero || !pacote || !pagamento) {
 
-                alert("Preencha todos os campos.");
+                alert("Por favor preencha todos os campos.");
                 return;
 
             }
@@ -137,9 +139,8 @@ Obrigado.`;
         revealElements.forEach(el => {
 
             const top = el.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
 
-            if (top < windowHeight - 100) {
+            if (top < window.innerHeight - 100) {
 
                 el.style.opacity = "1";
                 el.style.transform = "translateY(0)";
@@ -151,46 +152,45 @@ Obrigado.`;
     }
 
     window.addEventListener("scroll", revealOnScroll);
-
     revealOnScroll();
 
     /* ==========================
-       CONTADORES ANIMADOS
+       CONTADORES
     ========================== */
 
     const counters = document.querySelectorAll(".stat h2");
 
     counters.forEach(counter => {
 
-        const originalText = counter.innerText;
+        const textoOriginal = counter.innerText;
 
-        const target = parseInt(originalText);
+        const numero = parseInt(textoOriginal);
 
-        if (isNaN(target)) return;
+        if (isNaN(numero)) return;
 
-        let current = 0;
+        let valor = 0;
 
-        const increment = Math.ceil(target / 100);
+        const incremento = Math.ceil(numero / 100);
 
-        function updateCounter() {
+        function atualizar() {
 
-            current += increment;
+            valor += incremento;
 
-            if (current < target) {
+            if (valor < numero) {
 
-                counter.innerText = current + "+";
+                counter.innerText = valor + "+";
 
-                requestAnimationFrame(updateCounter);
+                requestAnimationFrame(atualizar);
 
             } else {
 
-                counter.innerText = originalText;
+                counter.innerText = textoOriginal;
 
             }
 
         }
 
-        updateCounter();
+        atualizar();
 
     });
 
@@ -206,9 +206,9 @@ Obrigado.`;
 
             if (window.scrollY > 50) {
 
-                header.style.background = "rgba(0,0,0,.98)";
+                header.style.background = "rgba(0,0,0,.95)";
                 header.style.boxShadow =
-                    "0 10px 30px rgba(0,0,0,.25)";
+                    "0 10px 25px rgba(0,0,0,.25)";
 
             } else {
 
